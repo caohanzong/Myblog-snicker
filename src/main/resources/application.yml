@@ -1,0 +1,28 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+  messages:
+    basename: i18n/messages
+
+
+comment.avatar: /images/avatar.png
+message.avatar: /images/avatar.png
+
+mybatis:
+  type-aliases-package: com.chz.pojo
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 开启驼峰
+    map-underscore-to-camel-case: true
+    # 开启sql输出
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+pagehelper:
+  helper-dialect: mysql
+  params: count=countSql
+  reasonable: true
+  support-methods-arguments: true
+
+

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>躁动起来！！！</title>
+    <link href="../../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
+    <script src="http://api.asilu.com/cdn/jquery.js,jquery.backstretch.min.js" type="text/javascript"></script>
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css>
+    <link rel="stylesheet" href="../../static/css/dropdown.css" th:href="@{/css/dropdown.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me1.css" th:href="@{/css/me1.css}">
+    <script src="https://cdn.jsdelivr.net/gh/caohanzong/carnival@main/js/carnival.js"></script>
+
+
+</head>
+<body>
+
+<script type="text/javascript">
+    $.backstretch([
+        'http://api.asilu.com/cdn/img/bg/444.jpg',
+        'http://api.asilu.com/cdn/img/bg/445.jpg',
+        'http://api.asilu.com/cdn/img/bg/446.jpg',
+        'http://api.asilu.com/cdn/img/bg/447.jpg',
+        'http://api.asilu.com/cdn/img/bg/448.jpg'
+    ], {
+        fade : 15000, // 动画时长
+        duration : 1000 // 切换延时
+    });
+</script>
+
+
+<!--导航-->
+<nav id="nav" class="gird-header" style=" top:0px">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui olive header item" style="font-family: STSong">Snicker</h2>
+            <!--<div class="right m-item item m-mobile-hide">-->
+            <a href="#" th:href="@{/}" class="active m-item item"><i class="home icon"></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item item"><i class="clone outline icon"></i>分类</a>
+            <a href="#" th:href="@{/archives}" class="m-item item"><i class="clock icon"></i>时间轴</a>
+            <div class="dropdown">
+                <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="一些有意思的东东~">
+                    <i class="fas fa-fw fa-fan fa-spin"></i>
+                    趣味
+                </a>
+                <div class="menu-more-content dropdown-content">
+                    <a href="https://win11.blueedge.me/" title="Windows 11 in React 💻🌈⚡" target="_blank" rel="noopener">
+                        💻 Windows 11 🌈
+                    </a>
+                    <a th:href="@{/funny/high/}" title="前方高能♂ 小心外放！" target="_blank" rel="noopener">
+                        <i class="fas fa-fw fa-dizzy"></i>
+                        燥起来！
+                    </a>
+                    <a th:href="@{/funny/music}" title="初音未来音乐游戏" target="_blank" rel="noopener">
+                        <i class="fas fa-fw fa-music"></i>
+                        音乐屋 </a>
+                    <a th:href="@{/funny/catch-the-cat}" title="逮住那只猫!">
+                        <i class="fas fa-fw fa-cat"></i>
+                        抓住猫咪
+                    </a>
+                </div>
+
+            </div>
+            <a href="#" th:href="@{/message}" class="m-item item"><i class="book icon"></i>留言板</a>
+            <a href="#" th:href="@{/friends}" class="m-item item"><i class="pencil alternate icon"></i>友人帐</a>
+            <a href="#" th:href="@{/picture}" class="m-item item"><i class="image icon"></i>照片墙</a>
+            <a href="#" th:href="@{/about}" class="active m-item item"><i class="info icon"></i>关于我</a>
+            <!--</div>-->
+            <div class="right m-item item">
+                <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui icon transparent input m-margin-tb-tiny" style="color: aqua">
+                        <input style="color: white" type="text" name="query" placeholder="Search...." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-hide" style="display: none">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+
+<!--个人资料描述-->
+<div class="ui container box-shadow-max" style="width: 1000px;filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8; " >
+    <div class="" align="center" style="margin-top: 61px">
+        <!--;height: 1500px; width: 500px-->
+        <hr class="m-margin-top-large">
+        <br><br><br>
+        <h2 class="m-margin-tb-tiny" style="font-size: xx-large;font-weight: bold;color: #00ffff;font-family: STSong">Everybody~ High起来!</h2>
+        <br><br><br>
+        <div class=admonition-content style="background: #00ffff; height: 100px; text-align:center">
+            <br>
+            <p style=font-size:40px;color:red><i class="fas fa-exclamation-triangle"></i>前方高能♂
+        </div>
+
+        <br><br><br>
+
+        <figure>
+            <img src="../../static/images/1.gif" th:src="@{/images/1.gif}" width="538" height="225">
+        </figure>
+        <figure>
+            <img src="../../static/images/2.gif" th:src="@{/images/2.gif}" width="400" height="100">
+        </figure>
+        <figure>
+            <img src="../../static/images/2.gif" th:src="@{/images/2.gif}" width="300" height="75">
+        </figure>
+        <figure>
+            <img src="../../static/images/2.gif" th:src="@{/images/2.gif}" width="200" height="50">
+        </figure>
+        <!--<figure>
+            <img src="../../static/images/3.gif" width="300" height="560">
+        </figure>-->
+
+
+
+        <br>
+        <br>
+        <br><br><br><br><br><br><br><br>
+
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<br>
+<br>
+
+<!--底部栏-->
+<footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
+    <!--容器-->
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="five wide column">
+                <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced m-margin-top-max" >联系我</div>
+                <div class="ui inverted link list">
+                    <div href="#" class="m-text-thin">Email：1224228911@qq.com</div>
+                    <div href="#" class="m-text-thin">QQ：1224228911</div>
+                    <div href="#" class="m-text-thin">微信：chz200109</div>
+                </div>
+            </div>
+
+            <div class="six wide column" >
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <!--微信二维码-->
+                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >阁主微信</div>
+                        <img src="../../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+
+            <!--博客运行时间统计-->
+            <div class="five wide column">
+                <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">阁内信息</div>
+                <!--<p id="htmer_time" class="item m-text-thin"></p>-->
+                <div id="blog-message">
+                    <div class="ui inverted link list" style="align-content: center;margin-top: 10px" th:fragment="blogMessage">
+                        <div class="center m-text-thin">
+                            文章总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogTotal}"> 14 </h2> 篇
+                        </div>
+                        <div class="center m-text-thin">
+                            访问总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogViewTotal}"> 14 </h2> 次
+                        </div>
+                        <div class="center m-text-thin">
+                            评论总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogCommentTotal}"> 14 </h2> 条
+                        </div>
+                        <div class="center m-text-thin">
+                            留言总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogMessageTotal}"> 14 </h2> 条
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">建阁：<span id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)</div>
+    </div>
+    </div>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script>
+    // $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+
+    $('#blog-message').load(/*[[@{/footer/blogmessage}]]*/"/footer/blogmessage");
+
+    // 运行时间统计
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+    function setTime() {
+        /*此处为网站的创建时间*/
+        var create_time = Math.round(new Date(Date.UTC(2020, 01, 25, 15, 15, 15)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+            + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+            + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }
+    setInterval(setTime, 1000);
+
+
+
+
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.wechat').popup({
+        popup : $('.wechat-qr'),
+        position: 'bottom center'
+    });
+    $('.qq').popup();
+
+
+
+
+</script>
+</body>
+</html>
