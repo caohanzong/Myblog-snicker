@@ -253,6 +253,12 @@ body{
     right: 0 !important;
 }
 
+.m-title-font{
+    font-family: STSong;
+    font-weight: 900;
+    font-size: x-large;
+}
+
 /*-----color-----*/
 .m-black {
     color: #333 !important;
