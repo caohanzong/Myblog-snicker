@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
     <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css>
     <link rel="stylesheet" href="../static/css/dropdown.css" th:href="@{/css/dropdown.css}">
+    <style>
+        li{line-height:25px;}
+    </style>
 </head>
 <body>
 
@@ -77,7 +80,7 @@
 </div>
 
 <!--个人资料描述-->
-<div class="ui container m-opacity box-shadow-max">
+<div class="ui container m-opacity box-shadow-max" style="width: 1000px;filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8; " >
     <div class="ui segment m-margin-" align="center">
         <div class="m-margin-top-large" align="center">
             <img class="ui circular image" align="center" src="../static/images/me1.jpg" th:src="@{/images/me.jpg}" style="width: 150px;height: 150px;">
@@ -104,65 +107,64 @@
         <hr class="m-margin-top-small" style="width: 30%">
         <br>
 
-        <div style="text-align: left; width: 600px">
+        <div style="text-align: left; width: 800px; font-size: 15px">
             <div>
-                <h3>目前可以公开的情报</h3>
+                <h3>首先感谢访问我的博客。</h3>
+                <hr class="m-margin-top-small" style="width: 100%; ">
+                <h3>🌈 关于作者</h3>
                 <ul>
-                    <li>M E: 目前是一名计科大三的学生，在读于河北工业大学，对新奇的知识有求知的欲望，愿意尝试各种未知</li>
-                    <li>目标：考研上岸</li>
-                    <li>特征：兴趣至上</li>
-                    <li>爱好：敲代码、看小说、看动漫，阅读、写作、跑步</li>
+                    <li>基本信息：00后，目前是一名计科大三的学生，在读于河北工业大学</li>
+                    <li>爱好：写Bug、下围棋、打游戏、逛各种hub</li>
+                    <li>性格：不喜约束、喜欢安静、但喜欢听节奏的电音</li>
+                    <li>M E：在大二的一个晚上，偶然看见大佬的博客：<a href="https://www.zhyocean.cn">程序猿张先森</a>，猛然醒悟学校讲的课程似乎并不是很重要<del>（笑）</del>，
+                        然后开始疯狂的自我探索，看到有趣的软件都会情不自禁地分析一波技术栈，可能用到了什么 algorithm，然后自我陶醉。</li>
+                    <!--<li>自学mysql、javaweb、mybatis、springmvc、springboot，还有springcloud、 redis等没有学，
+                        未来初步打算学习linux、docker、golang等技术。路很长，但自己也比较年轻。</li>-->
                 </ul>
-                <h3>Snicker博客</h3>
-                <p>Snicker个人博客系统，基于SpringBoot框架构建。学习过程中参考了很多大佬的博客。目前博客系统还是非常简单，功能不全的状态，先部署上线了，后期会逐渐增加主题切换等功能，样式上也会大改的。</p>
-                <p>本博客项目已在github上开源，项目地址：<a href="https://github.com/yubifeng/SkyBlog">https://github.com/yubifeng/SkyBlog</a>，欢迎访问。</p>
-                <h3>读过的书（部分）</h3>
-                <p>《国富论》、《全球通史》、《围城》、《苏菲的世界》、《如何阅读一本书》、《1984》、《美丽新世界》、《仲夏夜之梦》、《深入理解Java虚拟机》、《Java并发编程的艺术》、
-                    《永久记录》</p>
-                <h3>正在读的书</h3>
-                <p>《设计模式Java版》、《剑指Offer》、《雪国》、《资本论》、《山海经》</p>
-                <p>欢迎交换书单</p>
+                <h3>🏠 我 & 博客</h3>
+                <ul>
+
+                    <li>Snicker个人博客系统，基于SpringBoot+semantic-ui构建。学习过程中参考了很多大佬的博客。目前博客系统还是非常简单，功能不全的状态，先部署上线了，后期会逐渐增加主题切换、完善评论、适配手机端等功能。</li>
+                    <li>本博客项目已在github上开源，项目地址：<a href="https://github.com/caohanzong/Myblog-snicker">https://github.com/caohanzong/Myblog-snicker</a>，欢迎访问。</li>
+                    <li>对于这个网站来说目前漏洞特别多，我也在不断的去优化改进中，本人可能在技术上和审美风格上确实有点问题，不过我也在好好的努力修改和提升个人能力中感谢！</li>
+                    <li>服务器用到是腾讯云2核4G的学生机，222元3年，Respect!</li>
+                </ul>
+                <h3>👀 最后想说一点别的</h3>
+                <li style="text-indent: 30px; list-style:none">
+                    万事都有开头，坚持下去，一切都会好起来的。博客也是我程序生涯的第一站。虽然我爬行的很慢但我相信迟早有一天我会飞起来的。大学生活也马上会随即过去，感觉有学习目标和兴趣的时候是真的比高中还努力，经常写代码搞到半夜！没办法就是这么热爱。
+
+                </li>
+                <li style="text-indent: 30px; list-style:none">
+                    <a href="javascript:void(0);">大学生活真的是还没怎么享受就快要结束了，没办法，自己选的路，再怎么也得往下走。记录记录人生，去看看世界，给未来的自己留下点青春的影子！</a>老哥的这句话很赞！我也来引用一下！
+                </li>
+                <br><br>
+
+
+                <hr class="m-margin-top-small" style="width: 100%; ">
             </div>
 
         </div>
 
-        <div>
 
-            <p>“小二，上茶~”</p>
-            <p>“来~嘞~，客官您稍等”</p>
-            <p>“各位客官，我是ONESTAR，人称“一颗星”，此客栈掌柜的”</p>
-            <br>
-            <p>95后</p>
-            <p>爱编程、爱运动、爱折腾</p>
-            <p>生命在于折腾</p>
-            <p>世界很大</p>
-            <p>有些鸟儿注定是不会被关在笼子里的</p>
-            <p>因为它们的每一片羽毛都闪耀着自由的光辉</p>
-            <p>既然来到了人间</p>
-            <p>便去经历，去拼搏，去感受，去爱</p>
-            <p>生命不息，折腾不止</p>
-            <p>总有些人，有些事，会让你感觉到生命的温暖和满足，让你感慨生命的“不虚此行”</p>
-            <p>届时，我会说</p>
-            <p>我来过，我不后悔！</p>
-        </div>
-        <hr class="m-margin-top-large">
+
+
         <br>
-        <h2 class="m-margin-tb-tiny" style="font-size: xx-large;font-weight: bold;color: #F08047;font-family: STSong">打赏本站</h2>
-            <div class="ui orange basic label m-margin-tb-tiny">
-            <p style="font-size: medium">每一次提笔的我们，就像街边的街头艺人，用笔唱着自己的歌谣。如果有一天你感动了，那么期待您请我们来一杯咖啡</p>
-            </div>
-            <div class="ui orange basic label">
-                <div class="ui images" style="font-size: inherit !important;">
-                    <div class="image">
-                        <img src="../static/images/zhifupay.jpg" th:src="@{/images/zhifupay.jpg}" alt="" class="ui rounded bordered image" style="width: 180px">
-                        <div>支付宝</div>
-                    </div>
-                    <div class="image">
-                        <img src="../static/images/wechatpay.jpg" th:src="@{/images/wechatpay.jpg}" alt="" class="ui rounded bordered image" style="width: 180px">
-                        <div>微信</div>
-                    </div>
-                </div>
-            </div>
+<!--        <h2 class="m-margin-tb-tiny" style="font-size: xx-large;font-weight: bold;color: #F08047;font-family: STSong">打赏本站</h2>-->
+<!--            <div class="ui orange basic label m-margin-tb-tiny">-->
+<!--            <p style="font-size: medium">每一次提笔的我们，就像街边的街头艺人，用笔唱着自己的歌谣。如果有一天你感动了，那么期待您请我们来一杯咖啡</p>-->
+<!--            </div>-->
+<!--            <div class="ui orange basic label">-->
+<!--                <div class="ui images" style="font-size: inherit !important;">-->
+<!--                    <div class="image">-->
+<!--                        <img src="../static/images/zhifupay.jpg" th:src="@{/images/zhifupay.jpg}" alt="" class="ui rounded bordered image" style="width: 180px">-->
+<!--                        <div>支付宝</div>-->
+<!--                    </div>-->
+<!--                    <div class="image">-->
+<!--                        <img src="../static/images/wechatpay.jpg" th:src="@{/images/wechatpay.jpg}" alt="" class="ui rounded bordered image" style="width: 180px">-->
+<!--                        <div>微信</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
     <!--<div class="hiddenDiv"></div>-->
     </div>
 </div>
