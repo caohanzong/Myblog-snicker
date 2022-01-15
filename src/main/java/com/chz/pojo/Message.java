@@ -26,6 +26,8 @@ public class Message {
     private Date createTime;
     private Long parentMessageId;
     private boolean adminMessage;
+    private String windowName;
+    private String browserName;
 
     //回复留言
     private List<Message> replyMessages = new ArrayList<>();

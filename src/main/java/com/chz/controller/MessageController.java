@@ -59,6 +59,7 @@ public class MessageController {
             message.setParentMessageId(message.getParentMessage().getId());
         }
 
+        //System.out.println(message);
         messageService.saveMessage(message);
         List<Message>  messages = messageService.listMessage();
         model.addAttribute("messages",messages);
