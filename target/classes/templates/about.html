@@ -16,15 +16,15 @@
 <body>
 
 <!--导航-->
-<nav id="nav" class="gird-header">
+<nav class="gird-header">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui olive header item" style="font-family: STSong">Snicker</h2>
             <!--<div class="right m-item item m-mobile-hide">-->
-            <a href="#" th:href="@{/}" class="active m-item item"><i class="home icon"></i>首页</a>
-            <a href="#" th:href="@{/types/-1}" class="m-item item"><i class="clone outline icon"></i>分类</a>
-            <a href="#" th:href="@{/archives}" class="m-item item"><i class="clock icon"></i>时间轴</a>
-            <div class="dropdown">
+            <a href="#" th:href="@{/}" class="m-item item m-mobile-hide "><i class="home icon"></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类</a>
+            <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide"><i class="clock icon"></i>时间轴</a>
+            <div class="dropdown m-mobile-hide">
                 <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="一些有意思的东东~">
                     <i class="fas fa-fw fa-fan fa-spin"></i>
                     趣味
@@ -47,12 +47,12 @@
                 </div>
 
             </div>
-            <a href="#" th:href="@{/message}" class="m-item item"><i class="book icon"></i>留言板</a>
-            <a href="#" th:href="@{/friends}" class="m-item item"><i class="pencil alternate icon"></i>友人帐</a>
-            <a href="#" th:href="@{/picture}" class="m-item item"><i class="image icon"></i>照片墙</a>
-            <a href="#" th:href="@{/about}" class="active m-item item"><i class="info icon"></i>关于我</a>
+            <a href="#" th:href="@{/message}" class="m-item item m-mobile-hide"><i class="book icon"></i>留言板</a>
+            <a href="#" th:href="@{/friends}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友人帐</a>
+            <a href="#" th:href="@{/picture}" class="m-item item m-mobile-hide"><i class="image icon"></i>照片墙</a>
+            <a href="#" th:href="@{/about}" class="active m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
             <!--</div>-->
-            <div class="right m-item item">
+            <div class="right m-item item m-mobile-hide">
                 <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
                     <div class="ui icon transparent input m-margin-tb-tiny" style="color: aqua">
                         <input style="color: white" type="text" name="query" placeholder="Search...." th:value="${query}">
@@ -62,7 +62,7 @@
             </div>
         </div>
     </div>
-    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-hide" style="display: none">
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
         <i class="sidebar icon"></i>
     </a>
 </nav>
