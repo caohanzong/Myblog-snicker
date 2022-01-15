@@ -26,6 +26,8 @@ public class Comment {
     private Long blogId;
     private Long parentCommentId;
     private boolean adminComment;
+    private String windowName;
+    private String browserName;
 
     //回复评论
     private List<Comment> replyComments = new ArrayList<>();

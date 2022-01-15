@@ -539,6 +539,10 @@ h5,h6{font-size:1em;}
                 <div class="metadata">
                   <span class="date" th:text="${#dates.format(comment.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
                 </div>
+                <div class="" aria-hidden="true" style="">
+                  <span th:text="${comment.windowName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Windows10 &nbsp;</span>&nbsp;
+                  <span th:text="${comment.browserName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Chrome 97.0.4692.71 &nbsp;</span>
+                </div>
                 <div class="text" th:text="${comment.content}">
                   How artistic!
                 </div>
@@ -564,6 +568,10 @@ h5,h6{font-size:1em;}
                     <div class="metadata">
                       <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
                     </div>
+                    <div class="" aria-hidden="true" style="">
+                      <span th:text="${comment.windowName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Windows10 &nbsp;</span>&nbsp;
+                      <span th:text="${comment.browserName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Chrome 97.0.4692.71 &nbsp;</span>
+                    </div>
                     <div class="text" th:text="${reply.content}">
                       How artistic!
                     </div>
@@ -584,6 +592,8 @@ h5,h6{font-size:1em;}
       <div id="comment-form" class="ui form">
         <input type="hidden" name="blogId" th:value="${blog.id}">
         <input type="hidden" name="parentComment.id" value="-1">
+        <input type="" id="win1_lei" name="window.name" value="unknown">
+        <input type="" id="win2_lei" name="browser.name" value="unknown">
         <div class="field">
           <textarea name="content" placeholder="请输入评论信息..."></textarea>
         </div>
@@ -693,6 +703,15 @@ h5,h6{font-size:1em;}
 <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
 <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
 
+<script src="https://cdn.jsdelivr.net/gh/caohanzong/Myblog-snicker@main/src/main/resources/static/lib/Browser.js"></script>
+<script>
+  var info = new Browser();
+
+  currentTimeHtml1 = ' ' + info.os + ' ' + info.osVersion + ' ';
+  currentTimeHtml2 = ' ' + info.browser + info.version + ' ';
+  document.getElementById("win1_lei").value = currentTimeHtml1;
+  document.getElementById("win2_lei").value = currentTimeHtml2;
+</script>
 
 <script th:inline="javascript">
 
@@ -847,7 +866,9 @@ h5,h6{font-size:1em;}
             "blogId" : $("[name='blogId']").val(),
             "nickname": $("[name='nickname']").val(),
             "email"   : $("[name='email']").val(),
-            "content" : $("[name='content']").val()
+            "content" : $("[name='content']").val(),
+            "windowName" : $("[name='window.name']").val(),
+            "browserName" : $("[name='browser.name']").val()
         },function (responseTxt, statusTxt, xhr) {
             $(window).scrollTo($('#goto'),500);
             clearContent();
@@ -859,6 +880,8 @@ h5,h6{font-size:1em;}
         $("[name='email']").val('');
         $("[name='content']").val('');
         $("[name='parentComment.id']").val(-1);
+        $("[name='window.name']").val('');
+        $("[name='browser.name']").val('');
         $("[name='content']").attr("placeholder", "请输入评论信息...");
     }
 

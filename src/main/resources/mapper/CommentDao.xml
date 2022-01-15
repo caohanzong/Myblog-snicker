@@ -3,8 +3,8 @@
 <mapper namespace="com.chz.dao.CommentDao">
 
     <insert id="saveComment" parameterType="com.chz.pojo.Comment">
-        insert into myblog.t_comment (nickname,email,content,avatar,create_time,blog_id,parent_comment_id,admin_comment)
-        values (#{nickname},#{email},#{content},#{avatar},#{createTime},#{blogId},#{parentCommentId},#{adminComment});
+        insert into myblog.t_comment (nickname,email,content,avatar,create_time,blog_id,parent_comment_id,admin_comment,windowname,browsername)
+        values (#{nickname},#{email},#{content},#{avatar},#{createTime},#{blogId},#{parentCommentId},#{adminComment},#{windowName},#{browserName});
     </insert>
 
 
