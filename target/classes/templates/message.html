@@ -163,8 +163,8 @@
                                             <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
                                         </div>
                                         <div class="" aria-hidden="true" style="">
-                                            <span th:text="${message.windowName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Windows10 &nbsp;</span>&nbsp;
-                                            <span th:text="${message.browserName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Chrome 97.0.4692.71 &nbsp;</span>
+                                            <span th:text="${reply.windowName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Windows10 &nbsp;</span>&nbsp;
+                                            <span th:text="${reply.browserName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Chrome 97.0.4692.71 &nbsp;</span>
                                         </div>
                                         <div class="text" th:text="${reply.content}">太赞了！ </div>
                                         <div class="actions">
