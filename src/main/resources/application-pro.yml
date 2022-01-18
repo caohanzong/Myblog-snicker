@@ -1,8 +1,8 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/myblog?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://82.156.202.247:3306/myblog?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: myblog
     password: 123456
 
 #  jpa:
@@ -12,9 +12,12 @@ spring:
 
 logging:
   level:
-    root: warn
-    com.pal: info
+#    root: warn
+#    com.pal: info
+    root: info
+    com.pal: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
   file: log/blog-pro.log
 
 server:
-  port: 8081
+  port: 8080
