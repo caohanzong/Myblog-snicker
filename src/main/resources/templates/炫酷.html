@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html lang="en">
 <head>
     <title>star</title>
     <script type="text/javascript">
@@ -20,42 +20,46 @@
             var bool = 0,
                 t = 0; // theta
             d.onmousemove = function (e) {
-                if(window.T) {
-                    if(D==9) { D=Math.random()*15; f(1); }
+                if (window.T) {
+                    if (D == 9) {
+                        D = Math.random() * 15;
+                        f(1);
+                    }
                     clearTimeout(T);
                 }
                 X = e.pageX; // grab mouse pixel coords
                 Y = e.pageY;
-                a=0; // previous coord.x
-                b=0; // previous coord.y
+                a = 0; // previous coord.x
+                b = 0; // previous coord.y
                 A = X, // original coord.x
                     B = Y; // original coord.y
-                R=(e.pageX/W * 999>>0)/999;
-                r=(e.pageY/H * 999>>0)/999;
-                U=e.pageX/H * 360 >>0;
-                D=9;
+                R = (e.pageX / W * 999 >> 0) / 999;
+                r = (e.pageY / H * 999 >> 0) / 999;
+                U = e.pageX / H * 360 >> 0;
+                D = 9;
                 g = 360 * Math.PI / 180;
                 T = setInterval(f = function (e) { // start looping spectrum
                     c.save();
                     c.globalCompositeOperation = "source-over"; // switch to additive color application
-                    if(e!=1) {
+                    if (e != 1) {
                         c.fillStyle = "rgba(0,0,0,0.02)";
                         c.fillRect(0, 0, W, H); // resize <canvas> and draw black rect (default)
                     }
                     c.restore();
-                    i = 25; while(i --) {
+                    i = 25;
+                    while (i--) {
                         c.beginPath();
-                        if(D > 450 || bool) { // decrease diameter
-                            if(!bool) { // has hit maximum
+                        if (D > 450 || bool) { // decrease diameter
+                            if (!bool) { // has hit maximum
                                 bool = 1;
                             }
-                            if(D < 0.1) { // has hit minimum
+                            if (D < 0.1) { // has hit minimum
                                 bool = 0;
                             }
                             t -= g; // decrease theta
                             D -= 0.1; // decrease size
                         }
-                        if(!bool) {
+                        if (!bool) {
                             t += g; // increase theta
                             D += 0.1; // increase size
                         }
@@ -76,17 +80,20 @@
                     B = Y; // set original coord.y
                 }, 16);
             }
-            j.onkeydown = function(e) { a=b=0; R += 0.05 }
-            d.onmousemove({pageX:300, pageY:290})
+            j.onkeydown = function (e) {
+                a = b = 0;
+                R += 0.05
+            }
+            d.onmousemove({pageX: 300, pageY: 290})
         }
 
     </script>
-<!--    <script src="https://cdn.jsdelivr.net/gh/caohanzong/carnival@main/js/carnival.js"></script>-->
+    <!--    <script src="https://cdn.jsdelivr.net/gh/caohanzong/carnival@main/js/carnival.js"></script>-->
 </head>
 
 
 <body style="margin:0px;padding:0px;width:100%;height:100%;overflow:hidden;">
-<canvas id="c"  style="width:100%;height:100%;"></canvas>
+<canvas id="c" style="width:100%;height:100%;"></canvas>
 
 
 </body>

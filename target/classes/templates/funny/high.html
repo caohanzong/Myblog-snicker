@@ -27,8 +27,8 @@
         'https://cdn.jsdelivr.net/gh/caohanzong/Myblog-snicker@main/src/main/resources/static/images/background%20(6).jpg',
         'https://cdn.jsdelivr.net/gh/caohanzong/Myblog-snicker@main/src/main/resources/static/images/background%20(7).jpg'
     ], {
-        fade : 9000, // 动画时长
-        duration : 100 // 切换延时
+        fade: 9000, // 动画时长
+        duration: 100 // 切换延时
     });
 </script>
 
@@ -48,7 +48,8 @@
                     趣味
                 </a>
                 <div class="menu-more-content dropdown-content">
-                    <a href="https://win11.blueedge.me/" title="Windows 11 in React 💻🌈⚡" target="_blank" rel="noopener">
+                    <a href="https://win11.blueedge.me/" title="Windows 11 in React 💻🌈⚡" target="_blank"
+                       rel="noopener">
                         💻 Windows 11 🌈
                     </a>
                     <a th:href="@{/funny/high/}" title="前方高能♂ 小心外放！" target="_blank" rel="noopener">
@@ -73,7 +74,8 @@
             <div class="right m-item item">
                 <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
                     <div class="ui icon transparent input m-margin-tb-tiny" style="color: aqua">
-                        <input style="color: white" type="text" name="query" placeholder="Search...." th:value="${query}">
+                        <input style="color: white" type="text" name="query" placeholder="Search...."
+                               th:value="${query}">
                         <i onclick="document.forms['search'].submit()" class="search link icon"></i>
                     </div>
                 </form>
@@ -87,12 +89,13 @@
 
 
 <!--个人资料描述-->
-<div class="ui container box-shadow-max" style="width: 1000px;filter:alpha(Opacity=70);-moz-opacity:0.7;opacity: 0.7; " >
+<div class="ui container box-shadow-max" style="width: 1000px;filter:alpha(Opacity=70);-moz-opacity:0.7;opacity: 0.7; ">
     <div class="" align="center" style="margin-top: 61px">
         <!--;height: 1500px; width: 500px-->
         <hr class="m-margin-top-large">
         <br><br><br>
-        <h2 class="m-margin-tb-tiny" style="font-size: xx-large;font-weight: bold;color: #00ffff;font-family: STSong">Everybody~ High起来!</h2>
+        <h2 class="m-margin-tb-tiny" style="font-size: xx-large;font-weight: bold;color: #00ffff;font-family: STSong">
+            Everybody~ High起来!</h2>
         <br><br><br>
         <div class=admonition-content style="background: #00ffff; height: 100px; text-align:center">
             <br>
@@ -118,22 +121,14 @@
         </figure>-->
 
 
-
         <br>
         <br>
         <br><br><br><br><br><br><br><br>
 
 
-
-
-
     </div>
 
 </div>
-
-
-
-
 
 
 <br>
@@ -145,7 +140,9 @@
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
             <div class="five wide column">
-                <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced m-margin-top-max" >联系我</div>
+                <div style="font-size: large;font-weight: bold"
+                     class="ui inverted m-text-thin m-text-spaced m-margin-top-max">联系我
+                </div>
                 <div class="ui inverted link list">
                     <div href="#" class="m-text-thin">Email：1224228911@qq.com</div>
                     <div href="#" class="m-text-thin">QQ：1224228911</div>
@@ -153,45 +150,56 @@
                 </div>
             </div>
 
-            <div class="six wide column" >
+            <div class="six wide column">
                 <div class="ui inverted link list">
                     <div class="item">
                         <!--微信二维码-->
-                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >阁主微信</div>
-                        <img src="../../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced ">
+                            阁主微信
+                        </div>
+                        <img src="../../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}"
+                             class="ui m-margin-top rounded image" alt="" style="width: 110px">
                     </div>
                 </div>
             </div>
 
             <!--博客运行时间统计-->
             <div class="five wide column">
-                <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">阁内信息</div>
+                <div style="font-size: large;font-weight: bold"
+                     class="ui inverted  m-text-thin m-text-spaced m-margin-top">阁内信息
+                </div>
                 <!--<p id="htmer_time" class="item m-text-thin"></p>-->
                 <div id="blog-message">
-                    <div class="ui inverted link list" style="align-content: center;margin-top: 10px" th:fragment="blogMessage">
+                    <div class="ui inverted link list" style="align-content: center;margin-top: 10px"
+                         th:fragment="blogMessage">
                         <div class="center m-text-thin">
-                            文章总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogTotal}"> 14 </h2> 篇
+                            文章总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;" th:text="${blogTotal}"> 14 </h2> 篇
                         </div>
                         <div class="center m-text-thin">
-                            访问总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogViewTotal}"> 14 </h2> 次
+                            访问总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;" th:text="${blogViewTotal}"> 14 </h2> 次
                         </div>
                         <div class="center m-text-thin">
-                            评论总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogCommentTotal}"> 14 </h2> 条
+                            评论总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;" th:text="${blogCommentTotal}"> 14 </h2> 条
                         </div>
                         <div class="center m-text-thin">
-                            留言总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogMessageTotal}"> 14 </h2> 条
+                            留言总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;" th:text="${blogMessageTotal}"> 14 </h2> 条
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="ui inverted section divider"></div>
-        <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">建阁：<span id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)</div>
+        <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">建阁：<span
+                id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)
+        </div>
     </div>
     </div>
 
 </footer>
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
@@ -229,19 +237,19 @@
         }
         return time;
     }
+
     function setTime() {
         /*此处为网站的创建时间*/
-        var create_time = Math.round(new Date(Date.UTC(2020, 01, 25, 15, 15, 15)).getTime() / 1000);
-        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        var create_time = Math.round(new Date("2022-01-18 00:00:00").getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime()) / 1000);
         currentTime = secondToDate((timestamp - create_time));
         currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
             + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
             + '秒';
         document.getElementById("htmer_time").innerHTML = currentTimeHtml;
     }
+
     setInterval(setTime, 1000);
-
-
 
 
     $('.menu.toggle').click(function () {
@@ -249,12 +257,10 @@
     });
 
     $('.wechat').popup({
-        popup : $('.wechat-qr'),
+        popup: $('.wechat-qr'),
         position: 'bottom center'
     });
     $('.qq').popup();
-
-
 
 
 </script>

@@ -51,7 +51,8 @@
             <p align="center">Coding!!!</p>
         </div>
 
-        <img src="../../static/images/index1.gif" th:src="@{/images/index1.gif}" alt="" class="ui rounded bordered fluid image">
+        <img src="../../static/images/index1.gif" th:src="@{/images/index1.gif}" alt=""
+             class="ui rounded bordered fluid image">
     </div>
 </div>
 
@@ -170,8 +171,8 @@
 
     function setTime() {
         /*此处为网站的创建时间*/
-        var create_time = Math.round(new Date(Date.UTC(2020, 6, 7, 15, 15, 15)).getTime()/1000);
-        var timestamp = Math.round((new Date().getTime() / 1000+ 8 * 60 * 60 ));
+        var create_time = Math.round(new Date("2022-01-18 00:00:00").getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime()) / 1000);
         currentTime = secondToDate((timestamp - create_time));
         currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
             + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]

@@ -19,7 +19,8 @@
             <h2 class="ui olive header item" style="font-family: STSong">Snicker</h2>
             <!--<div class="right m-item item m-mobile-hide">-->
             <a href="#" th:href="@{/}" class="m-item item m-mobile-hide "><i class="home icon"></i>首页</a>
-            <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide"><i
+                    class="clone outline icon"></i>分类</a>
             <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide"><i class="clock icon"></i>时间轴</a>
             <div class="dropdown m-mobile-hide">
                 <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="一些有意思的东东~">
@@ -27,7 +28,8 @@
                     趣味
                 </a>
                 <div class="menu-more-content dropdown-content">
-                    <a href="https://win11.blueedge.me/" title="Windows 11 in React 💻🌈⚡" target="_blank" rel="noopener">
+                    <a href="https://win11.blueedge.me/" title="Windows 11 in React 💻🌈⚡" target="_blank"
+                       rel="noopener">
                         💻 Windows 11 🌈
                     </a>
                     <a th:href="@{/funny/high/}" title="前方高能♂ 小心外放！" target="_blank" rel="noopener">
@@ -52,7 +54,8 @@
             <div class="right m-item item m-mobile-hide">
                 <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
                     <div class="ui icon transparent input m-margin-tb-tiny" style="color: aqua">
-                        <input style="color: white" type="text" name="query" placeholder="Search...." th:value="${query}">
+                        <input style="color: white" type="text" name="query" placeholder="Search...."
+                               th:value="${query}">
                         <i onclick="document.forms['search'].submit()" class="search link icon"></i>
                     </div>
                 </form>
@@ -67,11 +70,13 @@
 
 <!--顶部图片-->
 <div class="m-bg-type_outer" style="width: 100%;height: 40%">
-    <img src="../static/images/messagebg.jpg" th:src="@{/images/messagebg.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+    <img src="../static/images/messagebg.jpg" th:src="@{/images/messagebg.jpg}" alt="" class="ui m-bg image"
+         style="width: 100%;height: 100%">
     <div class="m-bg-class_cover">
         <div class="ui container" style="position: relative ;bottom: -540px;">
             <div class="m-font-size-title m-right-bottom" align="center" style="font-family:'STXingkai'">留言板</div>
-            <div class="m-font-size-text-init-title m-margin-top" align="center">虽然只是短暂的擦身，相遇与分别，尽管如此，我却仍然想珍惜这所有的一切</div>
+            <div class="m-font-size-text-init-title m-margin-top" align="center">虽然只是短暂的擦身，相遇与分别，尽管如此，我却仍然想珍惜这所有的一切
+            </div>
 
         </div>
     </div>
@@ -96,7 +101,8 @@
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <div class="ui left icon input">
                             <i class="user icon"></i>
-                            <input type="text" name="nickname" placeholder="昵称" th:value="${session.user}!=null ? ${session.user.nickname}">
+                            <input type="text" name="nickname" placeholder="昵称"
+                                   th:value="${session.user}!=null ? ${session.user.nickname}">
                         </div>
                     </div>
                 </div>
@@ -106,14 +112,17 @@
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <div class="ui left icon input">
                             <i class="mail icon"></i>
-                            <input type="text" name="email" placeholder="邮箱 (请填写有效的邮箱)" th:value="${session.user}!=null ? ${session.user.email}">
+                            <input type="text" name="email" placeholder="邮箱 (请填写有效的邮箱)"
+                                   th:value="${session.user}!=null ? ${session.user.email}">
                         </div>
                     </div>
                 </div>
 
                 <div class="right aligned six wide column">
                     <div class="field m-mobile-wide m-margin-bottom-small">
-                        <button id="messagepost-btn" type="button" class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+                        <button id="messagepost-btn" type="button" class="ui teal button m-mobile-wide"><i
+                                class="edit icon"></i>发布
+                        </button>
                     </div>
                 </div>
             </div>
@@ -131,19 +140,27 @@
                             <div class="content">
                                 <a class="author">
                                     <span th:text="${message.nickname}">Matt</span>
-                                    <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${message.adminMessage}">栈主</div>
+                                    <div class="ui mini basic teal left pointing label m-padded-mini"
+                                         th:if="${message.adminMessage}">栈主
+                                    </div>
                                 </a>
                                 <div class="metadata">
-                                    <span class="date" th:text="${#dates.format(message.createTime,'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
+                                    <span class="date"
+                                          th:text="${#dates.format(message.createTime,'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
                                 </div>
                                 <div class="" aria-hidden="true" style="">
-                                    <span th:text="${message.windowName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Windows10 &nbsp;</span>&nbsp;
-                                    <span th:text="${message.browserName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Chrome 97.0.4692.71 &nbsp;</span>
+                                    <span th:text="${message.windowName}"
+                                          style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Windows10 &nbsp;</span>&nbsp;
+                                    <span th:text="${message.browserName}"
+                                          style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Chrome 97.0.4692.71 &nbsp;</span>
                                 </div>
-                                <div class="text" th:text="${message.content}">太赞了！ </div>
+                                <div class="text" th:text="${message.content}">太赞了！</div>
                                 <div class="actions">
-                                    <a class="reply" data-messageid="1" data-messagenickname="Matt" th:attr="data-messageid=${message.id},data-messagenickname=${message.nickname}" onclick="reply(this)">回复</a>
-                                    <a class="delete" href="#" th:href="@{/messages/{id}/delete(id=${message.id})}" onclick="return confirm('确定要删除该评论吗？三思啊! 删了可就没了！')" th:if="${session.user}">删除</a>
+                                    <a class="reply" data-messageid="1" data-messagenickname="Matt"
+                                       th:attr="data-messageid=${message.id},data-messagenickname=${message.nickname}"
+                                       onclick="reply(this)">回复</a>
+                                    <a class="delete" href="#" th:href="@{/messages/{id}/delete(id=${message.id})}"
+                                       onclick="return confirm('确定要删除该评论吗？三思啊! 删了可就没了！')" th:if="${session.user}">删除</a>
                                 </div>
                             </div>
                             <!--子集留言-->
@@ -155,21 +172,31 @@
                                     <div class="content">
                                         <a class="author">
                                             <span th:text="${reply.nickname}">小红</span>
-                                            <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminMessage}">栈主</div>
+                                            <div class="ui mini basic teal left pointing label m-padded-mini"
+                                                 th:if="${reply.adminMessage}">栈主
+                                            </div>
                                             &nbsp;<span th:text="|@ ${reply.parentNickname}|" class="m-teal">@ 小白</span>
                                         </a>
 
                                         <div class="metadata">
-                                            <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
+                                            <span class="date"
+                                                  th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
                                         </div>
                                         <div class="" aria-hidden="true" style="">
-                                            <span th:text="${reply.windowName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Windows10 &nbsp;</span>&nbsp;
-                                            <span th:text="${reply.browserName}" style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Chrome 97.0.4692.71 &nbsp;</span>
+                                            <span th:text="${reply.windowName}"
+                                                  style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Windows10 &nbsp;</span>&nbsp;
+                                            <span th:text="${reply.browserName}"
+                                                  style="background-color: #f0eff3; color: #888888; border-radius: 10%">&nbsp; Chrome 97.0.4692.71 &nbsp;</span>
                                         </div>
-                                        <div class="text" th:text="${reply.content}">太赞了！ </div>
+                                        <div class="text" th:text="${reply.content}">太赞了！</div>
                                         <div class="actions">
-                                            <a class="reply" data-messageid="1" data-messagenickname="Matt" th:attr="data-messageid=${reply.id},data-messagenickname=${reply.nickname}" onclick="reply(this)">回复</a>
-                                            <a class="delete" href="#" th:href="@{/messages/{id}/delete(id=${reply.id})}" onclick="return confirm('确定要删除该评论吗？三思啊! 删了可就没了！')" th:if="${session.user}">删除</a>
+                                            <a class="reply" data-messageid="1" data-messagenickname="Matt"
+                                               th:attr="data-messageid=${reply.id},data-messagenickname=${reply.nickname}"
+                                               onclick="reply(this)">回复</a>
+                                            <a class="delete" href="#"
+                                               th:href="@{/messages/{id}/delete(id=${reply.id})}"
+                                               onclick="return confirm('确定要删除该评论吗？三思啊! 删了可就没了！')"
+                                               th:if="${session.user}">删除</a>
                                         </div>
                                     </div>
                                 </div>
@@ -202,14 +229,15 @@
 </div>
 
 
-
 <!--底部栏-->
 <footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
     <!--容器-->
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
             <div class="five wide column">
-                <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced m-margin-top-max" >联系我</div>
+                <div style="font-size: large;font-weight: bold"
+                     class="ui inverted m-text-thin m-text-spaced m-margin-top-max">联系我
+                </div>
                 <div class="ui inverted link list">
                     <div href="#" class="m-text-thin">Email：1224228911@qq.com</div>
                     <div href="#" class="m-text-thin">QQ：1224228911</div>
@@ -217,40 +245,52 @@
                 </div>
             </div>
 
-            <div class="six wide column" >
+            <div class="six wide column">
                 <div class="ui inverted link list">
                     <div class="item">
                         <!--微信二维码-->
-                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >阁主微信</div>
-                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced ">
+                            阁主微信
+                        </div>
+                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}"
+                             class="ui m-margin-top rounded image" alt="" style="width: 110px">
                     </div>
                 </div>
             </div>
 
             <!--博客运行时间统计-->
             <div class="five wide column">
-                <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">阁内信息</div>
+                <div style="font-size: large;font-weight: bold"
+                     class="ui inverted  m-text-thin m-text-spaced m-margin-top">阁内信息
+                </div>
                 <!--<p id="htmer_time" class="item m-text-thin"></p>-->
                 <div id="blog-message">
-                    <div class="ui inverted link list" style="align-content: center;margin-top: 10px" th:fragment="blogMessage">
+                    <div class="ui inverted link list" style="align-content: center;margin-top: 10px"
+                         th:fragment="blogMessage">
                         <div class="center m-text-thin">
-                            文章总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogTotal}"> 14 </h2> 篇
+                            文章总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;" th:text="${blogTotal}"> 14 </h2> 篇
                         </div>
                         <div class="center m-text-thin">
-                            访问总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogViewTotal}"> 14 </h2> 次
+                            访问总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;" th:text="${blogViewTotal}"> 14 </h2> 次
                         </div>
                         <div class="center m-text-thin">
-                            评论总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogCommentTotal}"> 14 </h2> 条
+                            评论总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;" th:text="${blogCommentTotal}"> 14 </h2> 条
                         </div>
                         <div class="center m-text-thin">
-                            留言总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogMessageTotal}"> 14 </h2> 条
+                            留言总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;" th:text="${blogMessageTotal}"> 14 </h2> 条
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="ui inverted section divider"></div>
-        <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">建阁：<span id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)</div>
+        <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">建阁：<span
+                id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)
+        </div>
     </div>
     </div>
 
@@ -509,19 +549,19 @@
         }
         return time;
     }
+
     function setTime() {
         /*此处为网站的创建时间*/
-        var create_time = Math.round(new Date(Date.UTC(2020, 01, 25, 15, 15, 15)).getTime() / 1000);
-        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        var create_time = Math.round(new Date("2022-01-18 00:00:00").getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime()) / 1000);
         currentTime = secondToDate((timestamp - create_time));
         currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
             + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
             + '秒';
         document.getElementById("htmer_time").innerHTML = currentTimeHtml;
     }
+
     setInterval(setTime, 1000);
-
-
 
 
     $('.menu.toggle').click(function () {
@@ -529,7 +569,7 @@
     });
 
     $('.wechat').popup({
-        popup : $('.wechat-qr'),
+        popup: $('.wechat-qr'),
         position: 'bottom center'
     });
     $('.qq').popup();
@@ -581,15 +621,15 @@
 
     //发送请求给后端
     function postData() {
-        $("#message-container").load(/*[[@{/messages}]]*/"",{
-            "parentMessage.id" : $("[name='parentMessage.id']").val(),
+        $("#message-container").load(/*[[@{/messages}]]*/"", {
+            "parentMessage.id": $("[name='parentMessage.id']").val(),
             // "blog.id" : $("[name='blog.id']").val(),
             "nickname": $("[name='nickname']").val(),
-            "email"   : $("[name='email']").val(),
-            "content" : $("[name='content']").val(),
-            "windowName" : $("[name='window.name']").val(),
-            "browserName" : $("[name='browser.name']").val()
-        },function (responseTxt, statusTxt, xhr) {
+            "email": $("[name='email']").val(),
+            "content": $("[name='content']").val(),
+            "windowName": $("[name='window.name']").val(),
+            "browserName": $("[name='browser.name']").val()
+        }, function (responseTxt, statusTxt, xhr) {
 //        $(window).scrollTo($('#message-container'),500);
             clearContent();
         });
@@ -609,9 +649,9 @@
     function reply(obj) {
         var messageId = $(obj).data('messageid');
         var messageNickname = $(obj).data('messagenickname');
-        $("[name='content']").attr("placeholder", "@"+messageNickname).focus();
+        $("[name='content']").attr("placeholder", "@" + messageNickname).focus();
         $("[name='parentMessage.id']").val(messageId);
-        $(window).scrollTo(0,500);
+        $(window).scrollTo(0, 500);
     }
 
 </script>

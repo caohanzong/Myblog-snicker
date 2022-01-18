@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snicker-音乐盒</title>
 
     <link href="../../static/images/me1.jpg" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
     <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
-    <link rel="stylesheet" href="../../static/lib/music/css/zplayer.min.css" th:href="@{/lib/music/css/zplayer.min.css}" />
-    <script type="text/javascript" src="../../static/lib/music/js/zplayer.min.js" th:src="@{/lib/music/js/zplayer.min.js}"></script>
+    <link rel="stylesheet" href="../../static/lib/music/css/zplayer.min.css"
+          th:href="@{/lib/music/css/zplayer.min.css}"/>
+    <script type="text/javascript" src="../../static/lib/music/js/zplayer.min.js"
+            th:src="@{/lib/music/js/zplayer.min.js}"></script>
     <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css>
     <link rel="stylesheet" href="../../static/css/dropdown.css" th:href="@{/css/dropdown.css}">
-
 
 
 </head>
@@ -27,7 +28,8 @@
             <h2 class="ui olive header item" style="font-family: STSong">Snicker</h2>
             <!--<div class="right m-item item m-mobile-hide">-->
             <a href="#" th:href="@{/}" class="m-item item m-mobile-hide "><i class="home icon"></i>首页</a>
-            <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide"><i
+                    class="clone outline icon"></i>分类</a>
             <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide"><i class="clock icon"></i>时间轴</a>
             <div class="dropdown m-mobile-hide">
                 <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="一些有意思的东东~">
@@ -35,7 +37,8 @@
                     趣味
                 </a>
                 <div class="menu-more-content dropdown-content">
-                    <a href="https://win11.blueedge.me/" title="Windows 11 in React 💻🌈⚡" target="_blank" rel="noopener">
+                    <a href="https://win11.blueedge.me/" title="Windows 11 in React 💻🌈⚡" target="_blank"
+                       rel="noopener">
                         💻 Windows 11 🌈
                     </a>
                     <a th:href="@{/funny/high/}" title="前方高能♂ 小心外放！" target="_blank" rel="noopener">
@@ -60,7 +63,8 @@
             <div class="right m-item item m-mobile-hide">
                 <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
                     <div class="ui icon transparent input m-margin-tb-tiny" style="color: aqua">
-                        <input style="color: white" type="text" name="query" placeholder="Search...." th:value="${query}">
+                        <input style="color: white" type="text" name="query" placeholder="Search...."
+                               th:value="${query}">
                         <i onclick="document.forms['search'].submit()" class="search link icon"></i>
                     </div>
                 </form>
@@ -74,11 +78,13 @@
 
 <!--顶部图片-->
 <div class="m-bg-type_outer" style="width: 100%;height: 40%">
-    <img src="../../static/images/music.jpg" th:src="@{/images/music.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+    <img src="../../static/images/music.jpg" th:src="@{/images/music.jpg}" alt="" class="ui m-bg image"
+         style="width: 100%;height: 100%">
     <div class="m-bg-class_cover">
         <div class="ui container" style="position: relative ;bottom: -540px;">
             <div class="m-font-size-title m-right-bottom" align="center" style="font-family:'STXingkai'">音乐盒</div>
-            <div class="m-font-size-text-init-title m-margin-top" align="center">是啊，我也喜欢温柔，温暖，以及寻找着相互吸引的东西。努力活下去的心，很喜欢</div>
+            <div class="m-font-size-text-init-title m-margin-top" align="center">是啊，我也喜欢温柔，温暖，以及寻找着相互吸引的东西。努力活下去的心，很喜欢
+            </div>
         </div>
     </div>
 </div>
@@ -170,7 +176,7 @@
                 "[03:49.64]生命的火已点燃\n" +
                 "[03:52.88]\n" +
                 "[03:53.55]lrc歌词编辑：天龙 QQ：26092798"
-        },{
+        }, {
             title: "我从崖边跌落",
             author: "谢春花",
             url: "http://music.163.com/song/media/outer/url?id=415086030.mp3",
@@ -233,7 +239,7 @@
                 "[03:07.09]谁把美梦捕捉\n" +
                 "[03:10.20]谁心已成魔\n" +
                 "[03:18.80]"
-        },{
+        }, {
             title: "十点半的地铁",
             author: "李健",
             url: "http://music.163.com/song/media/outer/url?id=466333788.mp3",
@@ -327,7 +333,7 @@
                 "[04:39.36]终于每个人 都有了座位\n" +
                 "[04:42.62]温柔的风\n" +
                 "[04:44.69]轻轻地轻轻地吹"
-        },{
+        }, {
             title: "天亮以前说再见",
             author: "曲肖冰",
             url: "http://music.163.com/song/media/outer/url?id=1336789644.mp3",
@@ -397,7 +403,7 @@
                 "[04:04.17]企划营销：梦童娱乐\n" +
                 "[04:05.64]监制：三千\n" +
                 "[04:06.25]ＯＰ：千和世纪\n"
-        },{
+        }, {
             title: "起风了",
             author: "买辣椒也用券",
             url: "http://music.163.com/song/media/outer/url?id=1330348068.mp3",
@@ -476,7 +482,7 @@
                 "[04:46.760] 发行公司：Negia Entertainment Inc.\n" +
                 "[04:47.476] 特别支持：中村光雄(Mitsuo Nakamura)\n" +
                 "[04:51.019]"
-        },{
+        }, {
             title: "遥远的你",
             author: "不靠谱组合",
             url: "http://music.163.com/song/media/outer/url?id=1333192765.mp3",
@@ -529,7 +535,7 @@
                 "[03:19.862] 制作公司：Hikoon Music\n" +
                 "[03:20.573] 发行公司：鲸鱼向海（北京）文化有限公司\n"
 
-        },{
+        }, {
             title: "尘土",
             author: "安朕宇",
             url: "http://music.163.com/song/media/outer/url?id=865021614.mp3",
@@ -575,7 +581,7 @@
                 "[03:22.12]不孤独\n" +
                 "[03:25.45]不清楚\n" +
                 "[03:29.58]不会哭 哦\n"
-        },{
+        }, {
             title: "夜来故事多",
             author: "RAiNBOW计划",
             url: "http://music.163.com/song/media/outer/url?id=35625826.mp3",
@@ -643,7 +649,7 @@
                 "[04:51.05]浮现和回响 最是折磨人\n" +
                 "[04:56.89]夜来故事怎叫人 不心疼\n" +
                 "[05:02.83]\n"
-        },{
+        }, {
             title: "夜空中最亮的星",
             author: "逃跑计划",
             url: "http://music.163.com/song/media/outer/url?id=25706282.mp3",
@@ -700,7 +706,7 @@
                 "[03:37.590]请照亮我前行\n" +
                 "[03:50.890]夜空中最亮的星 能否听清\n" +
                 "[03:59.810]那仰望的人 心底的孤独和叹息"
-        },{
+        }, {
             title: "理想不大",
             author: "RAiNBOW计划",
             url: "http://music.163.com/song/media/outer/url?id=465921645.mp3",
@@ -745,7 +751,7 @@
                 "[03:11.76]你可懂我 希望你也 向左向右 看？\n" +
                 "[03:21.07]\n" +
                 "[03:24.43]\n"
-        },{
+        }, {
             title: "世间美好与你环环相扣",
             author: "柏松",
             url: "http://music.163.com/song/media/outer/url?id=1363948882.mp3",
@@ -799,7 +805,7 @@
                 "[03:07.354]和声：柏松\n" +
                 "[03:08.104]录音：柏松\n" +
                 "[03:09.104]混音：张强\n"
-        },{
+        }, {
             title: "云烟成雨",
             author: "房东的猫",
             url: "http://music.163.com/song/media/outer/url?id=513360721.mp3",
