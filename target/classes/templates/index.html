@@ -7,8 +7,10 @@
 
     <link href="../static/images/me1.jpg" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
-    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/caohanzong/Myblog-snicker@main/src/main/resources/static/css/me.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css">
     <link rel="stylesheet" href="../static/css/dropdown.css" th:href="@{/css/dropdown.css}">
 
     <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
@@ -82,7 +84,8 @@
 <!--顶部图片-->
 <div id="background" class="m-bg-class_outer" style="width: 100%;">
 
-    <img id="go1" src="../static/images/bg.jpg" th:src="@{/images/bg.jpg}" alt="" class="ui m-bg image"
+    <img id="go1" src="../static/images/bg.jpg"
+         th:src="@{https://cdn.jsdelivr.net/gh/caohanzong/Myblog-snicker@main/src/main/resources/static/images/bg.jpg}" alt="" class="ui m-bg image"
          style="width: 100%;height: 100%;display: none">
 
     <video class="full-video"
@@ -90,7 +93,7 @@
            poster="https://img14.360buyimg.com/ddimg/jfs/t1/175057/18/19582/882056/60ee7ac8Ef0045710/202d2ad878684a3b.gif"
            autoplay loop muted style="width: 100%;height:100%;object-fit: cover;display: none">
         <source style="width: 100%;height: 100vh;" src="../static/video/%E8%B5%9B%E8%BD%A6.mp4"
-                th:src="@{/video/%E8%B5%9B%E8%BD%A6.mp4}">
+                th:src="@{https://cdn.jsdelivr.net/gh/caohanzong/Myblog-snicker@main/src/main/resources/static/video/%E8%B5%9B%E8%BD%A6.mp4}">
     </video>
 
     <div class="m-bg-class_cover" align="center" style="height: 100%">
@@ -335,10 +338,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-<script src="../static/lib/waypoints/jquery.waypoints.min.js"
-        th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
-<script src="../static/lib/star.js" th:src="@{/lib/star.js}"></script>
-<script src="../static/lib/snow.js" th:src="@{/lib/snow.js}"></script>
+<script src="https://cdn.jsdelivr.net/gh/caohanzong/Myblog-snicker@main/src/main/resources/static/lib/waypoints/jquery.waypoints.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/caohanzong/Myblog-snicker@main/src/main/resources/static/lib/snow.js"></script>
 
 <script>
 
